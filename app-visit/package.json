@@ -17,7 +17,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^14.2.0",
+    "@angular/animations": "^14.3.0",
     "@angular/cdk": "^14.2.0",
     "@angular/common": "^14.2.0",
     "@angular/compiler": "^14.2.0",
@@ -43,9 +43,12 @@
     "jquery": "3.6.0",
     "moment": "2.29.1",
     "ng-apexcharts": "^1.7.6",
+    "ngx-toast-notifier": "0.0.7",
+    "ngx-toastr": "^15.2.2",
     "perfect-scrollbar": "1.5.5",
     "popper.js": "1.16.1",
     "rxjs": "~7.5.0",
+    "toastr": "^2.1.4",
     "tslib": "^2.3.0",
     "web-animations-js": "2.3.2",
     "zone.js": "~0.11.4"

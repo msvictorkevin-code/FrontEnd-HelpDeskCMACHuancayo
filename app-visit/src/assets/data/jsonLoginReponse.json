@@ -1,0 +1,14 @@
+{
+  "data": {
+    "idColaborador": 1,
+    "username": "usuadmin",
+    "isAdmin": true,
+    "nombres": "Victor",
+    "apellidos": "Matos",
+    "codEmpleado": "10055989",
+    "area": "Sistemas",
+    "acceso": true
+  },
+  "status": true,
+  "message": "Su usuario usuadmin iniciado sesión correctamente."
+}

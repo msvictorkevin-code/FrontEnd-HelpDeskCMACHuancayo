@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminLayoutRoutes } from './admin-layout.routing';
 import { DashboardComponent } from '../../dashboard/dashboard.component';
-import { NotificationsComponent } from '../../notifications/notifications.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
@@ -13,13 +12,16 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSelectModule } from '@angular/material/select';
 
-import { TicketCreateComponent } from 'app/ticket/ticket-create/ticket-create.component';
-import { UsuarioCreateComponent } from 'app/usuario/usuario-create/usuario-create.component';
-import { TicketListComponent } from 'app/ticket/ticket-list/ticket-list.component';
-import { UsuarioListComponent } from 'app/usuario/usuario-list/usuario-list.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { NotificationsComponent } from 'app/areas/notifications/notifications.component';
+import { TicketCreateComponent } from 'app/areas/ticket/ticket-create/ticket-create.component';
+import { TicketListComponent } from 'app/areas/ticket/ticket-list/ticket-list.component';
+import { UsuarioCreateComponent } from 'app/areas/usuario/usuario-create/usuario-create.component';
+import { UsuarioListComponent } from 'app/areas/usuario/usuario-list/usuario-list.component';
+import { NgxToastNotifierModule } from 'ngx-toast-notifier';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -35,7 +37,8 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     MatIconModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    NgxChartsModule
+    NgxChartsModule,
+    NgxToastNotifierModule.forRoot()
   ],
   declarations: [
     DashboardComponent,

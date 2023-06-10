@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { single } from '../../assets/data/data';
+import { single } from '../../../assets/data/data';
 
 @Component({
   selector: 'app-dashboard',

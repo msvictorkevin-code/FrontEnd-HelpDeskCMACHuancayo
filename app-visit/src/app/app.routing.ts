@@ -3,21 +3,21 @@ import { CommonModule, } from '@angular/common';
 import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-import { InicioSessionComponent } from './inicio-session/inicio-session.component';
+import { InicioSessionComponent } from './security/inicio-session/inicio-session.component';
+import { AdminLayoutComponent } from './areas/layouts/admin-layout/admin-layout.component';
 
 const routes: Routes =[
   { path: 'login', component: InicioSessionComponent },
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'login',
     pathMatch: 'full',
   }, {
     path: '',
     component: AdminLayoutComponent,
     children: [{
       path: '',
-      loadChildren: () => import('./layouts/admin-layout/admin-layout.module').then(m => m.AdminLayoutModule)
+      loadChildren: () => import('./areas/layouts/admin-layout/admin-layout.module').then(m => m.AdminLayoutModule)
     }]
   }
 ];
