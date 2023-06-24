@@ -10,7 +10,7 @@ const routes: Routes =[
   { path: 'login', component: InicioSessionComponent },
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'dashboard',
     pathMatch: 'full',
   }, {
     path: '',

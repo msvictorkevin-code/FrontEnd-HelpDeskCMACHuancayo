@@ -1,0 +1,17 @@
+{
+    "data": {
+      "codEmpleado": "10055989",
+      "idColaborador": 1,
+      "area": "Sistemas",
+      "nombre": "Victor",
+      "apellido": "Matos",
+      "idUsuario": 1,
+      "usuario": "usuadmin",
+      "password": "Peru20239",
+      "nroIntentos": 0,
+      "administador": true,
+      "estado": true
+    },
+    "status": true,
+    "message": "Consulta devuelve resultado."
+  }

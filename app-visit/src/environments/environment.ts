@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  urlApiService: "http://localhost:8081/api"
+  urlApiService: "http://localhost:8080/api"
 };

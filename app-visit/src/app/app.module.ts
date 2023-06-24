@@ -19,6 +19,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { ComponentsModule } from './core/components/components.module';
 import { AdminLayoutComponent } from './areas/layouts/admin-layout/admin-layout.component';
 import { NgxToastNotifierModule } from 'ngx-toast-notifier';
+import { UsuarioActualizarComponent } from './areas/usuario/usuario-actualizar/usuario-actualizar.component';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { NgxToastNotifierModule } from 'ngx-toast-notifier';
     AppComponent,
     AdminLayoutComponent,
     InicioSessionComponent,
+    UsuarioActualizarComponent,
    
   ],
   providers: [],

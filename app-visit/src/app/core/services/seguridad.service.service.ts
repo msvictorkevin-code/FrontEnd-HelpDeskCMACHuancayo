@@ -13,8 +13,8 @@ export class SeguridadServiceService {
   constructor(private httpClient: HttpClient) { }
 
   validarCredenciales(usuario: string, clave: string) {
-    return this.httpClient.post<UsuarioModelResponse>(`${this.APIADMINENDPOINT}/acceder`, { username: usuario, password: clave });
-    //return this.httpClient.get<UsuarioModelResponse>('../../../assets/data/jsonLoginReponse.json');
+    //return this.httpClient.post<UsuarioModelResponse>(`${this.APIADMINENDPOINT}/clientefoss/cliente/`, { username: usuario, password: clave });
+    return this.httpClient.get<UsuarioModelResponse>('../../../assets/data/jsonLoginReponse.json');
     //{ username: usuario, password: clave }
   }
 

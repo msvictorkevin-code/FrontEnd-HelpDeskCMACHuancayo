@@ -1,0 +1,8 @@
+{
+    "data": {
+      "idColaborador": 1,
+      "activo": false
+    },
+    "status": true,
+    "message": "Se actualizo correctamente."
+}

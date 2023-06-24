@@ -23,7 +23,7 @@
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table">
-                                <thead class=" text-primary">
+                                <thead class=" text-primary">                                
                                     <th>
                                         Codigo
                                     </th>
@@ -39,59 +39,39 @@
                                     <th>
                                         Administrador
                                     </th>
+                                    <th>
+                                        Estado
+                                    </th>
+                                    <th>
+                                        Operacion
+                                    </th>
                                 </thead>
                                 <tbody>
-                                    <tr>
+                                    <tr *ngFor="let item of this.datosColaborador">
                                         <td>
-                                           COD-001
+                                           {{item.codEmpleado}}
                                         </td>
                                         <td>
-                                            JosePerez dominguez
+                                            {{item.nombre }}  {{ item.apellido}}
                                         </td>
                                         <td>
-                                            Contabilidad
+                                            {{item.area}}
                                         </td>
                                         <td>
-                                            OudTurnhout@gmail.com
+                                            {{item.usuario}}
                                         </td>
                                         <td class="text-primary">
-                                            Si
+                                            {{item.administador}}
+                                        </td>
+                                        <td>
+                                            {{item.estado}}
+                                        </td>
+                                        <td>
+                                          <button mat-raised-button type="submit" (click)="obtenerColaborador(item.idColaborador, item.idUsuario)" class="btn btn-warning pull-right">Actualizar</button> 
+                                            <button mat-raised-button  (click)="deshabilitarColaborador(item.idColaborador)" class="btn btn-warning pull-right">Deshabilitar</button>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>
-                                           COD-002
-                                        </td>
-                                        <td>
-                                            Luis peraltes contreraz
-                                        </td>
-                                        <td>
-                                            Recursos Humanos
-                                        </td>
-                                        <td>
-                                            luisper@gmail.com
-                                        </td>
-                                        <td class="text-primary">
-                                            No
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                           COD-003
-                                        </td>
-                                        <td>
-                                            Julio maldonado gutierrez
-                                        </td>
-                                        <td>
-                                            Contabilidad
-                                        </td>
-                                        <td>
-                                            luisper@gmail.com
-                                        </td>
-                                        <td class="text-primary">
-                                            No
-                                        </td>
-                                    </tr>
+                                  
                                    
                                 </tbody>
                             </table>
@@ -102,4 +82,4 @@
 
         </div>
     </div>
-</div>
+</div><ngx-toast-notifier></ngx-toast-notifier>

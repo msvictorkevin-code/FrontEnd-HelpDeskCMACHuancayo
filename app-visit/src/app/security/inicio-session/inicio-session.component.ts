@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { SeguridadServiceService } from 'app/core/services/seguridad.service.service';
+import { LocalStorageService } from 'app/shared/Services/LocalStorage.services';
 import { ToastNofiferServices } from 'app/shared/Services/ToastNotifier.service';
 
 @Component({
@@ -17,7 +18,8 @@ export class InicioSessionComponent implements OnInit {
     private route: Router,
     private fb: FormBuilder,
     private seguridadServices: SeguridadServiceService,
-    private ngxToastService: ToastNofiferServices) { }
+    private ngxToastService: ToastNofiferServices,
+    private localstorage : LocalStorageService) { }
 
   ngOnInit(): void {
     this.CreateFisrtForm();
@@ -39,6 +41,7 @@ export class InicioSessionComponent implements OnInit {
         let body = response.data;
         if (body.acceso) {    
           this.ngxToastService.Success('Iniciar Session', response.message) 
+          this.localstorage.saveData('UserData', JSON.stringify(response.data)) ;
           setTimeout(() =>{ 
             this.route.navigate(["dashboard"]);
           }, 4000);
