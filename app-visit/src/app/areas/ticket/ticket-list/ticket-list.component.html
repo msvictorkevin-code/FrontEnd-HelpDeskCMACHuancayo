@@ -36,35 +36,19 @@
                   <th>Prioridad</th>
                   <th>Requision</th>
                   <th>Categoria</th>
+                  <th>Operación</th>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>Cerrada</td>
-                    <td>20/05/2023</td>
-                    <td>22/05/2023</td>
-                    <td>Alta</td>
-                    <td>Requision 01</td>
-                    <td>Categoria 01</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Pendiente</td>
-                    <td>20/05/2023</td>
-                    <td>-</td>
-                    <td>Alta</td>
-                    <td>Requision 01</td>
-                    <td>Categoria 01</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Pendiente</td>
-                    <td>23/05/2023</td>
-                    <td>-</td>
-                    <td>Media</td>
-                    <td>Requision 01</td>
-                    <td>Categoria 01</td>
-                  </tr>
+                  <tr *ngFor="let item of this.tikeList">
+                    <td>{{item.idTicket}}</td>
+                    <td>{{item.estado}}</td>
+                    <td>{{item.fechaGenerada}}</td>
+                    <td>{{item.fechaCierre}}</td>
+                    <td>{{item.prioridad}}</td>
+                    <td>{{item.idTicket}}</td>
+                    <td>{{item.idTicket}}</td>
+                    <button mat-raised-button (click)="obtenerTicket(item.idTicket)" class="btn btn-warning pull-right">Actualizar</button> 
+                  </tr>                
                 </tbody>
               </table>
             </div>
