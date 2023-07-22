@@ -48,7 +48,7 @@ export class UsuarioListComponent implements OnInit {
   }
 
   deshabilitarColaborador(colabId: number) {
-    debugger;
+
     this.colabServices.deshabilitarColab(colabId).subscribe(
       {
         next: ColaboradorModelResponse => {

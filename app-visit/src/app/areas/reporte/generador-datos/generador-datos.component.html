@@ -1,0 +1,135 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title">Reporte</h4>
+            <p class="card-category">Filtre los datos y genere reportes en formatos PDF y EXCEL
+            </p>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="form">
+              <div class="row">
+
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput formControlName="ticket" placeholder="Nro Ticket" type="number">
+                  </mat-form-field>
+                </div>
+
+                <div class="col-md-6">
+                  <mat-form-field>
+                    <mat-label>Estado</mat-label>
+                    <mat-select [(ngModel)]="selectedEstadoValue" formControlName="estado" name="estado">
+                      <mat-option *ngFor="let estd of   this.listaEstadosValidos" [value]="estd.estado">
+                        {{estd.estado}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+
+              </div>
+
+              <div class="row">
+
+                <div class="col-md-6">
+                  <mat-form-field>
+                    <mat-label>Requisision</mat-label>
+                    <mat-select [(ngModel)]="selectedReqValue" formControlName="requisicion" name="requisision"
+                      (ngModelChange)="requisicionSelectChanged($event)">
+                      <mat-option *ngFor="let req of this.requisicionSelect" [value]="req.id">
+                        {{req.nombre}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                  <mat-form-field>
+                    <mat-label>Categoria</mat-label>
+                    <mat-select [(ngModel)]="selectedCatValue" formControlName="categoria" name="categoria">
+                      <mat-option *ngFor="let cat of this.categoriaSelect" [value]="cat.id">
+                        {{cat.nombre}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <mat-form-field>
+                        <input matInput [matDatepicker]="picker1" formControlName="fechaDesde"
+                          placeholder="Fecha Desde">
+                        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                        <mat-datepicker #picker1></mat-datepicker>
+                      </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                      <mat-form-field>
+                        <input matInput [matDatepicker]="picker2" formControlName="fechaHasta"
+                          placeholder="Fecha hasta">
+                        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                        <mat-datepicker #picker2></mat-datepicker>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <mat-form-field>
+                    <mat-label>Usuarios</mat-label>
+                    <mat-select [(ngModel)]="selectedUsuarioValue" formControlName="asginado" name="Usuarios">
+                      <mat-option *ngFor="let user of this.listaUsuarios" [value]="user.idUsuario">
+                        {{user.username}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+
+              </div>
+
+              <button mat-raised-button class="btn btn-danger pull-right" (click)="cancelarProceso()">Cancelar</button>
+              <button mat-button [matMenuTriggerFor]="menu" class="btn btn-danger pull-right" >Exportar</button>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="exportarPdf()">Pdf</button>
+                <button mat-menu-item (click)="exportarExcel()">Excel</button>
+              </mat-menu>
+
+              <button mat-raised-button class="btn btn-danger pull-right" (click)="filtrarProceso()">Filtrar</button>
+              <div class="clearfix"></div>
+            </form>
+            <br>
+
+
+
+            <div class="table-responsive" *ngIf="this.listaFiltro.length > 0">
+              <table class="table">
+                <thead class="text-primary">
+                  <th>Codigo</th>
+                  <th>Estado</th>
+                  <th>Fecha Generada</th>
+                  <th>Tipo</th>
+                  <th>Categoria</th>
+                  <th>Usuario</th>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of this.listaFiltro">
+                    <td>{{item.idTicket}}</td>
+                    <td>{{item.estado}}</td>
+                    <td>{{item.fechaGenerada}}</td>
+                    <td>{{item.tipo}}</td>
+                    <td>{{item.categoria}}</td>
+                    <td>{{item.username}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

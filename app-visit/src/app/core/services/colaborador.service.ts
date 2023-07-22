@@ -37,4 +37,7 @@ export class ColaboradorService {
     return this.httpClient.post<ColaboradorModelResponse>(`${this.APIADMINENDPOINT}/colaborador/deshabilitar/` + request, {});
   }
 
+ listaUsuario(): Observable<any> {
+   return this.httpClient.get<any>(`${this.APIADMINENDPOINT}/reporte/listar/usuarios`);
+  }
 }

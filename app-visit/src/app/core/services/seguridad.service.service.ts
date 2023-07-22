@@ -18,4 +18,5 @@ export class SeguridadServiceService {
     //{ username: usuario, password: clave }
   }
 
+  
 }

@@ -20,7 +20,7 @@ import { ComponentsModule } from './core/components/components.module';
 import { AdminLayoutComponent } from './areas/layouts/admin-layout/admin-layout.component';
 import { NgxToastNotifierModule } from 'ngx-toast-notifier';
 import { UsuarioActualizarComponent } from './areas/usuario/usuario-actualizar/usuario-actualizar.component';
-
+import { TicketUpdateComponent } from './areas/ticket/ticket-update/ticket-update.component';
 
 @NgModule({
   imports: [
@@ -47,7 +47,7 @@ import { UsuarioActualizarComponent } from './areas/usuario/usuario-actualizar/u
     AdminLayoutComponent,
     InicioSessionComponent,
     UsuarioActualizarComponent,
-   
+    TicketUpdateComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],

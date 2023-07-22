@@ -21,6 +21,9 @@ import { TicketListComponent } from 'app/areas/ticket/ticket-list/ticket-list.co
 import { UsuarioCreateComponent } from 'app/areas/usuario/usuario-create/usuario-create.component';
 import { UsuarioListComponent } from 'app/areas/usuario/usuario-list/usuario-list.component';
 import { NgxToastNotifierModule } from 'ngx-toast-notifier';
+import { GeneradorDatosComponent } from 'app/areas/reporte/generador-datos/generador-datos.component';
+import {MatMenuModule} from '@angular/material/menu';
+
 
 @NgModule({
   imports: [
@@ -37,7 +40,8 @@ import { NgxToastNotifierModule } from 'ngx-toast-notifier';
     MatIconModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    NgxChartsModule,
+    NgxChartsModule,    
+    MatMenuModule,
     NgxToastNotifierModule.forRoot()
   ],
   declarations: [
@@ -46,7 +50,8 @@ import { NgxToastNotifierModule } from 'ngx-toast-notifier';
     TicketCreateComponent,
     TicketListComponent,
     UsuarioCreateComponent,
-    UsuarioListComponent
+    UsuarioListComponent,
+    GeneradorDatosComponent
   ]
 })
 
