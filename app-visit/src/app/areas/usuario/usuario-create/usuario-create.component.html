@@ -1,0 +1,79 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title">Nuevo Colaborador</h4>
+            <p class="card-category">Registre un nuevo usuario para el sistema de ticket</p>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="form">
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput  formControlName="codigo" placeholder="Codigo empleado">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                  <mat-form-field>
+                    <mat-label>Area</mat-label>
+                    <mat-select formControlName="area" name="food">
+                      <mat-option *ngFor="let area of areas" [value]="area.value">
+                        {{area.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+
+
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <mat-form-field class="example-full-width">
+                    <input matInput formControlName="nombre" placeholder="Nombre">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <mat-form-field class="example-full-width">
+                    <input matInput formControlName="apellido" placeholder="Apellido">
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-5">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Usuario" formControlName="email" type="email">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Clave" formControlName="password" type="password">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-3">
+                  <mat-form-field>
+                    <mat-label>Administrador</mat-label>
+                    <mat-select [(ngModel)]="isAdmin" name="rol">
+                      <mat-option *ngFor="let rol of listaAdministrador" [value]="rol">
+                        {{rol}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <button mat-raised-button type="submit" (click)="registrarColaborador()" class="btn btn-danger pull-right">Registrar</button>
+              <div class="clearfix"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<ngx-toast-notifier></ngx-toast-notifier>

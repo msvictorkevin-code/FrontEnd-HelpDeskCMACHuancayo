@@ -1,0 +1,12 @@
+{
+    "data": {
+      "codigo": "100016336",
+      "area": "finanzas",
+      "nombre": "Victor KEvin2",
+      "apellido": "matos secce3",
+      "usuario": "usuadmin6",
+      "administador": false
+    },
+    "status": true,
+    "message": "Se registro correctamente."
+  }

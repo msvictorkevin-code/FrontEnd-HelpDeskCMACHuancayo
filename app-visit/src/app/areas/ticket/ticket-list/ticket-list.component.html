@@ -1,0 +1,76 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <div class="row">
+              <div class="col-md-1">
+                <div class="card-icon">
+                  <i class="material-icons">content_copy</i>
+                </div>
+              </div>
+              <div class="col-md-10">
+                <h3 class="card-title">Lista de Ticket</h3>
+              </div>
+              <div class="col-md-1">
+                <button
+                  mat-fab
+                  color="warn"
+                  [routerLink]="'/ticket-create'"
+                  aria-label="Example icon button with a home icon"
+                >
+                  <mat-icon>add</mat-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table">
+                <thead class="text-primary">
+                  <th>Codigo</th>
+                  <th>Estado</th>
+                  <th>Fecha Generada</th>
+                  <th>Fecha Cierre</th>
+                  <th>Prioridad</th>
+                  <th>Requision</th>
+                  <th>Categoria</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Cerrada</td>
+                    <td>20/05/2023</td>
+                    <td>22/05/2023</td>
+                    <td>Alta</td>
+                    <td>Requision 01</td>
+                    <td>Categoria 01</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Pendiente</td>
+                    <td>20/05/2023</td>
+                    <td>-</td>
+                    <td>Alta</td>
+                    <td>Requision 01</td>
+                    <td>Categoria 01</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Pendiente</td>
+                    <td>23/05/2023</td>
+                    <td>-</td>
+                    <td>Media</td>
+                    <td>Requision 01</td>
+                    <td>Categoria 01</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

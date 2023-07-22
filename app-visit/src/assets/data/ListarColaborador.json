@@ -1,0 +1,39 @@
+{
+    "data": [
+      {
+        "codEmpleado": "10055989",
+        "idColaborador": 1,
+        "area": "Sistemas",
+        "nombre": "Victor",
+        "apellido": "Matos",
+        "idUsuario": 1,
+        "usuario": "usuadmin",
+        "administador": true,
+        "estado": true
+      },
+      {
+        "codEmpleado": "10066213",
+        "idColaborador": 2,
+        "area": "Finanzas",
+        "nombre": "Juan",
+        "apellido": "Perez",
+        "idUsuario": 2,
+        "usuario": "usucolab",
+        "administador": false,
+        "estado": true
+      },
+      {
+        "codEmpleado": "100016336",
+        "idColaborador": 3,
+        "area": "finanzas",
+        "nombre": "Victor KEvin2",
+        "apellido": "matos secce3",
+        "idUsuario": 3,
+        "usuario": "usuadmin6",
+        "administador": false,
+        "estado": true
+      }
+    ],
+    "status": true,
+    "message": "Consulta devuelve resultados."
+  }

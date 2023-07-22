@@ -1,0 +1,15 @@
+{
+    "data": {
+      "idColaborador": 1,
+      "codigo": "100016336",
+      "area": "finanzas",
+      "nombre": "Victor KEvin2",
+      "apellido": "matos secce3",
+      "idUsuario": 4,
+      "usuario": "usuadmin6",
+      "administador": false,
+      "activo": false
+    },
+    "status": true,
+    "message": "Se actualizo correctamente."
+  }

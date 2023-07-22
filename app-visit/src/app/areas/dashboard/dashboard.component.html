@@ -1,0 +1,69 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header card-header-warning card-header-icon">
+                        <div class="card-icon">
+                            <i class="material-icons">content_copy</i>
+                        </div>
+                        <p class="card-category">Total Ticket</p>
+                        <h3 class="card-title">49</h3>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header card-header-success card-header-icon">
+                        <div class="card-icon">
+                            <i class="material-icons">store</i>
+                        </div>
+                        <p class="card-category">Total de Ticket Abiertos Abiertos</p>
+                        <h3 class="card-title">245</h3>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header card-header-danger card-header-icon">
+                        <div class="card-icon">
+                            <i class="material-icons">info_outline</i>
+                        </div>
+                        <p class="card-category">Total de Ticket Abiertos Cerrados</p>
+                        <h3 class="card-title">75</h3>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="card card-chart">
+                    <div class="card-header card-header-warning">
+                        <h3 class="card-title">Grafico Estadístico</h3>
+                    </div>
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class="col-md-12 text-center" style=" width: 50%;
+                            display: block;
+                            margin-left: auto;
+                            margin-right: auto;">
+                                <ngx-charts-bar-vertical [view]="view" [scheme]="colorScheme" [results]="single"
+                                    [gradient]="gradient" [xAxis]="showXAxis" [yAxis]="showYAxis"
+                                    [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel"
+                                    (select)="onSelect($event)">
+                                </ngx-charts-bar-vertical>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
